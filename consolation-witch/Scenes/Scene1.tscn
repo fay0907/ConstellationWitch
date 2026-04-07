@@ -1,13 +1,21 @@
 [gd_scene format=3 uid="uid://w1v1epgmjbon"]
 
+[ext_resource type="Script" uid="uid://7hi756r5h37x" path="res://Scenes/CharacterBody2d.cs" id="1_pldgw"]
+[ext_resource type="Texture2D" uid="uid://dvk6fpfi2yi8e" path="res://Img,png/SmallWitch.png" id="2_80eni"]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vrojg"]
 
 [node name="Node2D" type="Node2D" unique_id=894362411]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=501045996]
 position = Vector2(-1, -1)
+script = ExtResource("1_pldgw")
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1136678421]
+position = Vector2(-4.0000153, 2)
+scale = Vector2(0.08994935, 0.0903716)
+texture = ExtResource("2_80eni")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1248579766]
 shape = SubResource("CapsuleShape2D_vrojg")
