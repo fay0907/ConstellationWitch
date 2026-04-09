@@ -1,15 +1,20 @@
 [gd_scene format=3 uid="uid://w1v1epgmjbon"]
 
-[ext_resource type="Script" uid="uid://7hi756r5h37x" path="res://Scenes/CharacterBody2d.cs" id="1_pldgw"]
+[ext_resource type="Script" uid="uid://c21gdj6ie7r1v" path="res://Scripts/CaracterControls.cs" id="1_80eni"]
 [ext_resource type="Texture2D" uid="uid://dvk6fpfi2yi8e" path="res://Img,png/SmallWitch.png" id="2_80eni"]
+[ext_resource type="Texture2D" uid="uid://c5ykmfobtvor7" path="res://Img,png/Screenshot 2025-10-28 100144.jpg" id="3_80eni"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vrojg"]
 
 [node name="Node2D" type="Node2D" unique_id=894362411]
 
+[node name="Screenshot20251028100144" type="Sprite2D" parent="." unique_id=1310484114]
+position = Vector2(-222, 222)
+texture = ExtResource("3_80eni")
+
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=501045996]
 position = Vector2(-1, -1)
-script = ExtResource("1_pldgw")
+script = ExtResource("1_80eni")
 metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1136678421]
@@ -19,3 +24,6 @@ texture = ExtResource("2_80eni")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1248579766]
 shape = SubResource("CapsuleShape2D_vrojg")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1592436887]
+position_smoothing_enabled = true
